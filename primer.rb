@@ -1,12 +1,13 @@
-def is_prime?(number)
-  true
-end
+# def is_prime?(number)
+#   true
+# end
 
 def get_primes(limit)
-  primes = []
-  (1..limit).each do |number|
-    if number >= 1 and is_prime?(number)
-      primes << number
+  numbers = (1..limit).to_a
+  primes = numbers
+  (2..limit).each do |number|
+    (number..limit).each do |multiple|
+       primes.delete number*multiple
     end
   end
   primes
