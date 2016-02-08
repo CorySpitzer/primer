@@ -1,0 +1,20 @@
+require './primer.rb'
+require 'rspec'
+
+describe '#is_prime?' do
+  it 'returns true for 1' do
+    expect(is_prime?(1)).to eq true
+  end
+
+end
+
+describe '#get_primes' do
+  it 'handles an input of 0' do
+    expect(get_primes(0)).to eq []
+  end
+
+  it 'gets the first prime' do
+    expect(get_primes(1)).to eq [1]
+  end
+
+end
